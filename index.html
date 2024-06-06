@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="style.css" >
+    <title>Formulir Pendaftaran</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h3>Pendaftaran Peminatan</h3>
+      </div>
+      <form action="">
+        <label for="nama" class="bold">Nama</label>
+        <input type="text" placeholder="Masukan Nama Anda" id="nama" />
+        
+        <label for="nim" class="bold">NIM</label>
+        <input type="text" placeholder="Masukan NIM Anda" id="nim" />
+        
+        <label for="angkatan" class="bold">Angkatan</label>
+        <select name="angkatan" id="angkatan">
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+          <option value="2023">2023</option>
+          <option value="2024">2024</option>
+        </select>
+
+        <p>Peminatan Pada Bidang :</p>
+        <div class="peminatan">
+          <input type="radio" name="peminatan" id="programming" value="programming" />
+          <label for="programming">Programming</label>
+          <input type="radio" name="peminatan" id="desain" value="desain" />
+          <label for="desain">Desain</label>
+          <input type="radio" name="peminatan" id="jaringan" value="jaringan" />
+          <label for="jaringan">Jaringan</label>
+          <input type="radio" name="peminatan" id="data" value="data" />
+          <label for="data">Data</label>
+        </div>
+
+        <label for="alamat" class="bold">Alamat</label>
+        <textarea placeholder="Tulis Alamat Disini" id="alamat" cols="20" rows="3"></textarea>
+
+        <button type="button" onclick="kirimdata()"><b>Kirim</b></button>
+      </form>
+    </div>
+    <div id="customAlert" class="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+      <p id="alertMessage"></p>
+    </div>
+    
+    <script src="main.js"></script>
+  </body>
+</html>
